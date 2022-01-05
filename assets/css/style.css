@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Lato:ital@1&display=swap');
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+font-family: 'Lato', sans-serif;
+font-size: 18px;
+line-height: 25px;
+
+}
+h1,h2,h3,h4{
+  font-family: 'Grand Hotel', cursive;
+}
+h2{
+  color: #E8565E;
+  font-size: 30px;
+  line-height: 45px;
+}
+p{
+  font-size: 18px;
+  line-height: 25px;
+}
+a{
+  text-decoration: none;
+}
+/**********Layout***********/
+.container{
+  width:100%;
+  max-width: 100vw;
+  margin:0 auto; 
+  padding: 0 10px;
+}
+.row{
+  display:flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/********Header********/
+header{
+  background-image: url(../images/header-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+nav ul{
+  text-align: center;
+}
+nav li{
+  display:inline-block;
+  padding: 30px 30px; 
+}
+nav li a{
+  color:#ffffff;
+  font-size: 22px;
+}
+header h1{
+  text-align: center;
+  color: #ffffff;
+  padding: 8rem 0 12.5rem;
+  font-size: 8rem;
+  }
+
+/****Footer****/
+footer{
+  text-align: center;
+  background-color: #2A2A2A;
+  color:#ffffff;
+   padding: 1rem; 
+  text-transform: capitalize;
+  position: relative;
+}
+
+/***Homepage *****/
+#home{
+  background-color: #FAF5E4;
+  padding: 15px;
+}
+.main img{
+  float:left;
+}
+.main img,.sidebar img{
+  border: 5px solid #fff; 
+  
+}
+
+/****Menu Page ***/
+#menu h2{
+  text-align: center;
+  color: #E8565E;
+  font-size: 40px;
+  list-style: 45px;
+  padding: 30px;
+
+}
+#menu div , #menu .img-div{
+  padding: 0 10px;
+}
+
+/**********Contact Page*************/
+#contact form {
+  max-width:800px;
+  width: 30%;
+  margin: 20px;
+  background-color: #FAF5E4;
+  padding: 30px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+}
+#contact input{
+  width: 100%;
+  line-height: 30px;
+  border:none;
+  margin: 20px 0;
+}
+#contact input[type=submit] {
+  border: 1px solid transparent;
+  background-color: #e8565e;
+  font-family: 'Lato-Black', sans-serif;
+  color: white;
+  border-radius: 23px;
+  padding: 0 30px;
+  height: 30px;
+}
+
+/***********Gallery***********/
+.gallery-grid{
+  max-width: 1200px;
+  margin: 20px auto;
+}
+.img-container{
+  width: 25%;
+  margin: 20px;
+}
+.img-container img{
+  max-width: 100%;
+  height: auto;
+}
+
+
+/************Media Queries***********/
+@media screen and (max-width:1200) {
+  #contact form {
+    width:40%;
+  }
+  
+}
+@media screen and (max-width:800px) {
+  #home .row{
+    flex-direction: column;
+  }
+  nav li{
+    display:inline-block;
+    padding: 10px 30px; 
+  }
+  nav li a{
+    font-size: 20px;
+  }
+  #menu .row{
+    flex-direction: column;
+  }
+  #menu .img-div{
+    margin: 10px auto;
+  }
+  #contact form{
+    width:70%;
+  }
+  
+}
+@media screen and (max-width:600px) {
+  p{
+    font-size:15px;
+    line-height: 22px;
+  }
+  #home .row, .gallery-grid{
+    flex-direction: column;
+  }
+  nav li{
+    display:inline-block;
+    padding: 10px 10px; 
+  }
+  nav li a {
+    font-size: 17px;
+}
+  header h1{
+    padding: 5rem 0 6rem;
+    font-size:70px;
+  }
+  .main img{
+    float:none;
+    width: 100%;
+    margin: 10px auto;
+    max-width: fit-content;
+    display: block;
+  }
+  
+  .sidebar img{
+    width: 90%;
+    margin: 10px auto;
+    display: block;
+  }
+  #menu h2{
+    padding: 1rem 0;
+    font-size: 30px;
+    
+  }
+  #contact form{
+    width:100%;
+  }
+  #contact label{
+    font-size: 16px;
+  }
+  #contact input {
+    margin: 10px 0;
+}
+  .gallery-grid {
+    align-items: center;
+    width: 100%;
+  }
+  .img-container{
+    width: 100%;
+    text-align: center;
+  }
+  footer{
+    font-size: 16px;
+  }
+  
+}
